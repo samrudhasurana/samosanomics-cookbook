@@ -19,11 +19,14 @@ body { margin: 0; text-wrap: pretty; }
 .kicker { display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 16px; }
 .display { font-family: var(--font-heading); font-weight: 400; font-size: clamp(38px, 5.5vw, 60px); line-height: 1.08; margin: 0; letter-spacing: -0.01em; }
 .meta-row { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.meta-row .tag-accent { color: var(--color-accent-900); }
+.meta-row .tag-outline { color: var(--color-accent-700); border-color: var(--color-accent-700); }
 .plate-wrap { margin: 32px 0; text-align: center; }
 .plate-wrap img { width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block; }
 .note-card { margin: 32px 0; }
-.note-card .card-kicker { margin: 0 0 8px; }
+.note-card .card-kicker { margin: 0 0 8px; color: var(--color-accent-700); }
 .note-card p:last-child { margin: 8px 0 0; }
+.nav a.nav-brand { font-size: 18px; }
 .split { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); gap: 48px; padding: 40px 0; }
 .split h2 { font-family: var(--font-heading); font-weight: 700; font-size: 22px; margin: 0 0 16px; color: var(--color-accent-700); }
 .ing-list { list-style: none; margin: 0; padding: 0; font-size: 15.5px; line-height: 30px; }
