@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Thecha Spaghetti — Flow Card</title>
+<style>
+  :root{
+    --line:#3f6b3a;
+    --line-light:#8fae86;
+    --bg:#f3f2f2;
+    --ink:#1f2a1c;
+
+    --pan1-bg:#f7dfba;   /* onion pan — amber */
+    --pan1-border:#b8752e;
+    --pan2-bg:#d9e8d2;   /* main pan — sage green */
+    --pan2-border:#4a7a3d;
+    --pasta-bg:#d3e2f0;  /* pasta pot — blue */
+    --pasta-border:#3f6ea8;
+    --blender-bg:#e3d7ee; /* blender/processor — lavender */
+    --blender-border:#6b4c8a;
+    --offheat-bg:#e8e6e0; /* counter / cooling — grey */
+    --offheat-border:#8a8a82;
+    --finish-bg:#f4e6b8; /* plate / finish — gold */
+    --finish-border:#a97e1e;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:24px;
+    background:#f3f2f2;
+    font-family:"P052","Palatino Linotype","Palatino","Book Antiqua",Georgia,serif;
+    color:var(--ink);
+  }
+  h1{
+    font-size:19px;
+    margin:0 0 10px 2px;
+    font-weight:700;
+  }
+  h1 span{
+    font-weight:400;
+    font-size:13px;
+    color:#555;
+  }
+  .legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin:0 0 14px 2px;
+    font-size:11.5px;
+  }
+  .legend .item{
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .legend .swatch{
+    width:13px;
+    height:13px;
+    border-radius:2px;
+    display:inline-block;
+    border:1px solid rgba(0,0,0,0.25);
+  }
+  .grid{
+    display:grid;
+    grid-template-columns: 172px 96px repeat(9, 118px) 112px;
+    grid-auto-rows: 44px;
+    border:1.5px solid var(--line);
+    width:max-content;
+  }
+  .cell{
+    border:0.75px solid var(--line-light);
+    padding:4px 6px;
+    font-size:10.8px;
+    line-height:1.28;
+    display:flex;
+    align-items:center;
+  }
+  .ing{
+    background:var(--bg);
+    font-weight:700;
+    justify-content:flex-start;
+  }
+  .prep{
+    background:var(--bg);
+    color:#555;
+    font-style:italic;
+    justify-content:flex-start;
+  }
+  .box{
+    justify-content:center;
+    text-align:center;
+    color:#28241a;
+  }
+  .season{
+    font-weight:700;
+    justify-content:center;
+    text-align:center;
+  }
+
+  .pan1{ background:var(--pan1-bg); border-color:var(--pan1-border); }
+  .pan2{ background:var(--pan2-bg); border-color:var(--pan2-border); }
+  .pasta{ background:var(--pasta-bg); border-color:var(--pasta-border); }
+  .blender{ background:var(--blender-bg); border-color:var(--blender-border); }
+  .offheat{ background:var(--offheat-bg); border-color:var(--offheat-border); }
+  .finish{ background:var(--finish-bg); border-color:var(--finish-border); }
+</style>
+</head>
+<body>
+
+<h1>Thecha Spaghetti <span>(serves 4)</span></h1>
+
+<div class="legend">
+  <div class="item"><span class="swatch" style="background:var(--pan1-bg); border-color:var(--pan1-border);"></span>Pan 1 — onions</div>
+  <div class="item"><span class="swatch" style="background:var(--pan2-bg); border-color:var(--pan2-border);"></span>Pan 2 — peanuts, spice mix, veggies &amp; sauce</div>
+  <div class="item"><span class="swatch" style="background:var(--pasta-bg); border-color:var(--pasta-border);"></span>Pasta pot</div>
+  <div class="item"><span class="swatch" style="background:var(--blender-bg); border-color:var(--blender-border);"></span>Blender / food processor</div>
+  <div class="item"><span class="swatch" style="background:var(--offheat-bg); border-color:var(--offheat-border);"></span>Off heat / counter</div>
+  <div class="item"><span class="swatch" style="background:var(--finish-bg); border-color:var(--finish-border);"></span>Finish &amp; serve</div>
+</div>
+
+<div class="grid">
+
+  <!-- Row 1: onion oil -->
+  <div class="cell ing" style="grid-row:1/2; grid-column:1/3;">1 tsp oil or vegan butter</div>
+  <div class="cell box pan1" style="grid-row:1/3; grid-column:3/4;">Cook, stirring occasionally, low-medium heat, until deeply golden (~30 min)</div>
+  <div class="cell" style="grid-row:1/2; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:1/2; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:1/2; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:1/2; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:1/2; grid-column:8/9;"></div>
+  <div class="cell box pan2" style="grid-row:1/14; grid-column:9/10;">Stir in caramelized onion &amp; sautéed veggies, cook (1–2 min)</div>
+  <div class="cell box pan2" style="grid-row:1/16; grid-column:10/11;">Stir in blended tofu &amp; black pepper, cook (1–2 min)</div>
+  <div class="cell box pan2" style="grid-row:1/18; grid-column:11/12;">Add cooked pasta, toss to coat (1–2 min)</div>
+  <div class="cell season finish" style="grid-row:1/19; grid-column:12/13;">Season to taste. Serve with garlic bread.</div>
+
+  <!-- Row 2: onion -->
+  <div class="cell ing" style="grid-row:2/3; grid-column:1/2;">1 large onion</div>
+  <div class="cell prep" style="grid-row:2/3; grid-column:2/3;">thinly slice</div>
+
+  <!-- Row 3: veg oil -->
+  <div class="cell ing" style="grid-row:3/4; grid-column:1/3;">1 tsp oil (mushrooms)</div>
+  <div class="cell box pan2" style="grid-row:3/5; grid-column:3/4;">Heat oil; add mushrooms, sauté (2–3 min)</div>
+  <div class="cell box pan2" style="grid-row:3/6; grid-column:4/5;">Add bell pepper, sauté (2–3 min)</div>
+  <div class="cell" style="grid-row:3/4; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:3/4; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:3/4; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:3/4; grid-column:8/9;"></div>
+
+  <!-- Row 4: mushrooms -->
+  <div class="cell ing" style="grid-row:4/5; grid-column:1/2;">1 cup mushrooms</div>
+  <div class="cell prep" style="grid-row:4/5; grid-column:2/3;">slice</div>
+  <div class="cell" style="grid-row:4/5; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:4/5; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:4/5; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:4/5; grid-column:8/9;"></div>
+
+  <!-- Row 5: bell pepper -->
+  <div class="cell ing" style="grid-row:5/6; grid-column:1/2;">1 green bell pepper</div>
+  <div class="cell prep" style="grid-row:5/6; grid-column:2/3;">thinly slice</div>
+  <div class="cell" style="grid-row:5/6; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:5/6; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:5/6; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:5/6; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:5/6; grid-column:8/9;"></div>
+
+  <!-- Row 6: peanuts -->
+  <div class="cell ing" style="grid-row:6/7; grid-column:1/3;">1 cup peanuts</div>
+  <div class="cell box pan2" style="grid-row:6/7; grid-column:3/4;">Dry-roast; cool &amp; peel</div>
+  <div class="cell" style="grid-row:6/7; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:6/7; grid-column:5/6;"></div>
+  <div class="cell box offheat" style="grid-row:6/12; grid-column:6/7;">Cool together</div>
+  <div class="cell box blender" style="grid-row:6/12; grid-column:7/8;">Coarsely grind</div>
+  <div class="cell box pan2" style="grid-row:6/14; grid-column:8/9;">Add ground spice mixture, cook (1–2 min)</div>
+
+  <!-- Row 7: spice oil -->
+  <div class="cell ing" style="grid-row:7/8; grid-column:1/3;">1 tsp olive oil or vegan butter</div>
+  <div class="cell" style="grid-row:7/8; grid-column:3/4;"></div>
+  <div class="cell box pan2" style="grid-row:7/9; grid-column:4/5;">Heat oil; add cumin seeds until they crackle (~1 min)</div>
+  <div class="cell box pan2" style="grid-row:7/12; grid-column:5/6;">Add garlic, chilies &amp; salt; roast, stirring (2–3 min)</div>
+
+  <!-- Row 8: cumin -->
+  <div class="cell ing" style="grid-row:8/9; grid-column:1/3;">½ tbsp cumin seeds</div>
+  <div class="cell" style="grid-row:8/9; grid-column:3/4;"></div>
+
+  <!-- Row 9: garlic (spice) -->
+  <div class="cell ing" style="grid-row:9/10; grid-column:1/3;">8 cloves garlic</div>
+  <div class="cell" style="grid-row:9/10; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:9/10; grid-column:4/5;"></div>
+
+  <!-- Row 10: chilies -->
+  <div class="cell ing" style="grid-row:10/11; grid-column:1/3;">8 green chilies (to taste)</div>
+  <div class="cell" style="grid-row:10/11; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:10/11; grid-column:4/5;"></div>
+
+  <!-- Row 11: salt (spice) -->
+  <div class="cell ing" style="grid-row:11/12; grid-column:1/3;">salt (spice mix)</div>
+  <div class="cell" style="grid-row:11/12; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:11/12; grid-column:4/5;"></div>
+
+  <!-- Row 12: sauce oil -->
+  <div class="cell ing" style="grid-row:12/13; grid-column:1/3;">1 tsp oil (sauce)</div>
+  <div class="cell box pan2" style="grid-row:12/14; grid-column:6/7;">Heat oil; add garlic, cook (30 sec–1 min)</div>
+  <div class="cell" style="grid-row:12/13; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:12/13; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:12/13; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:12/13; grid-column:7/8;"></div>
+
+  <!-- Row 13: garlic (sauce) -->
+  <div class="cell ing" style="grid-row:13/14; grid-column:1/2;">2 cloves garlic</div>
+  <div class="cell prep" style="grid-row:13/14; grid-column:2/3;">mince</div>
+  <div class="cell" style="grid-row:13/14; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:13/14; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:13/14; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:13/14; grid-column:7/8;"></div>
+
+  <!-- Row 14: tofu -->
+  <div class="cell ing" style="grid-row:14/15; grid-column:1/3;">6 oz silken tofu</div>
+  <div class="cell box blender" style="grid-row:14/15; grid-column:8/9;">Blend with reserved pasta water until smooth</div>
+  <div class="cell" style="grid-row:14/15; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:14/15; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:14/15; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:14/15; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:14/15; grid-column:7/8;"></div>
+
+  <!-- Row 15: black pepper -->
+  <div class="cell ing" style="grid-row:15/16; grid-column:1/3;">black pepper</div>
+  <div class="cell" style="grid-row:15/16; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:15/16; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:15/16; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:15/16; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:15/16; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:15/16; grid-column:8/9;"></div>
+
+  <!-- Row 16: spaghetti -->
+  <div class="cell ing" style="grid-row:16/17; grid-column:1/3;">16 oz spaghetti</div>
+  <div class="cell box pasta" style="grid-row:16/18; grid-column:3/4;">Bring salted water to a boil</div>
+  <div class="cell box pasta" style="grid-row:16/18; grid-column:4/5;">Cook, stirring occasionally (per package, ~8–10 min)</div>
+  <div class="cell box pasta" style="grid-row:16/18; grid-column:5/6;">Drain, reserving 1 cup pasta water</div>
+  <div class="cell" style="grid-row:16/17; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:16/17; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:16/17; grid-column:8/9;"></div>
+
+  <!-- Row 17: salt (pasta water) -->
+  <div class="cell ing" style="grid-row:17/18; grid-column:1/3;">salt (pasta water)</div>
+  <div class="cell" style="grid-row:17/18; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:17/18; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:17/18; grid-column:8/9;"></div>
+
+  <!-- Row 18: final seasoning -->
+  <div class="cell ing" style="grid-row:18/19; grid-column:1/3;">salt &amp; pepper (to taste)</div>
+  <div class="cell" style="grid-row:18/19; grid-column:3/4;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:8/9;"></div>
+
+
+  <!-- gap fillers -->
+  <div class="cell" style="grid-row:2/3; grid-column:4/5;"></div>
+  <div class="cell" style="grid-row:2/3; grid-column:5/6;"></div>
+  <div class="cell" style="grid-row:2/3; grid-column:6/7;"></div>
+  <div class="cell" style="grid-row:2/3; grid-column:7/8;"></div>
+  <div class="cell" style="grid-row:2/3; grid-column:8/9;"></div>
+  <div class="cell" style="grid-row:14/15; grid-column:9/10;"></div>
+  <div class="cell" style="grid-row:15/16; grid-column:9/10;"></div>
+  <div class="cell" style="grid-row:16/17; grid-column:9/10;"></div>
+  <div class="cell" style="grid-row:17/18; grid-column:9/10;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:9/10;"></div>
+  <div class="cell" style="grid-row:16/17; grid-column:10/11;"></div>
+  <div class="cell" style="grid-row:17/18; grid-column:10/11;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:10/11;"></div>
+  <div class="cell" style="grid-row:18/19; grid-column:11/12;"></div>
+</div>
+
+</body>
+</html>

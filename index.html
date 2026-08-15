@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<![CDATA[<helmet>
+<link rel="stylesheet" href="_ds/classical-36f86224-04ee-4ba2-a9c4-6f233a9ccd7d/styles.css">
+<script src="_ds/classical-36f86224-04ee-4ba2-a9c4-6f233a9ccd7d/_ds_bundle.js"></script>
+<style>
+body { margin: 0; text-wrap: pretty; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); }
+.nav { padding-inline: max(24px, calc((100% - 900px) / 2 + 24px)); }
+.hero { padding: 88px 0 56px; }
+.kicker { display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 16px; }
+.display { font-family: var(--font-heading); font-weight: 400; font-size: clamp(46px, 7vw, 84px); line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+.sub { font-size: 17px; line-height: 28px; max-width: 60ch; margin: 24px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent); }
+.hero .row { margin-top: 28px; }
+.hr { height: 1px; border: 0; margin: 0; background: var(--color-divider); }
+.recipes { padding: 48px 0 80px; }
+.recipes h2 { font-family: var(--font-heading); font-weight: 400; font-size: 26px; margin: 0 0 20px; }
+.recipe-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; text-decoration: none; color: inherit; }
+.recipe-card .card-body { color: color-mix(in srgb, var(--color-text) 78%, transparent); }
+footer { padding: 40px 0; font-size: 13px; color: color-mix(in srgb, var(--color-text) 70%, transparent); }
+</style>
+</helmet>
+<nav class="nav">
+  <span class="nav-brand">Samosanomics</span>
+  <a href="#recipes" aria-current="location">Recipes</a>
+</nav>
+<div class="wrap">
+  <section class="hero">
+    <span class="kicker">A family cookbook</span>
+    <h1 class="display">Samosanomics</h1>
+    <p class="sub">A running collection of the recipes we cook, tweak, and keep coming back to. Nothing fancy — just what’s landed on the table, written down so it doesn’t get lost.</p>
+    <div class="row">
+      <a href="./Thecha Spaghetti.dc.html" class="btn btn-primary">See the first recipe</a>
+    </div>
+  </section>
+  <hr class="hr" />
+  <section class="recipes" id="recipes">
+    <h2>Recipes</h2>
+    <a href="./Thecha Spaghetti.dc.html" class="card recipe-card">
+      <div>
+        <p class="card-title" style="margin:0;">Thecha Spaghetti</p>
+        <p class="card-body" style="margin:6px 0 0;">Serves 4</p>
+      </div>
+      <span class="tag tag-outline">Read recipe →</span>
+    </a>
+  </section>
+  <footer>More recipes to come.</footer>
+</div>]]>
+</x-dc>
+</body>
+</html>
