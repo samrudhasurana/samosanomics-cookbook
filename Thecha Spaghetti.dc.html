@@ -10,7 +10,6 @@
 <![CDATA[<helmet>
 <link rel="stylesheet" href="_ds/classical-36f86224-04ee-4ba2-a9c4-6f233a9ccd7d/styles.css">
 <script src="_ds/classical-36f86224-04ee-4ba2-a9c4-6f233a9ccd7d/_ds_bundle.js"></script>
-<script src="./image-slot.js"></script>
 <style>
 body { margin: 0; text-wrap: pretty; }
 .wrap { max-width: 900px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); }
@@ -21,10 +20,10 @@ body { margin: 0; text-wrap: pretty; }
 .display { font-family: var(--font-heading); font-weight: 400; font-size: clamp(38px, 5.5vw, 60px); line-height: 1.08; margin: 0; letter-spacing: -0.01em; }
 .meta-row { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 .plate-wrap { margin: 32px 0; text-align: center; }
-.plate-wrap image-slot { width: 100%; max-width: 560px; margin: 0 auto; display: block; }
+.plate-wrap img { width: 100%; max-width: 560px; height: auto; margin: 0 auto; display: block; }
 .note-card { margin: 32px 0; }
 .note-card .card-kicker { margin: 0 0 8px; }
-.note-card .placeholder { font-style: italic; color: color-mix(in srgb, var(--color-text) 55%, transparent); margin: 0; }
+.note-card p:last-child { margin: 8px 0 0; }
 .split { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); gap: 48px; padding: 40px 0; }
 .split h2 { font-family: var(--font-heading); font-weight: 700; font-size: 22px; margin: 0 0 16px; color: var(--color-accent-700); }
 .ing-list { list-style: none; margin: 0; padding: 0; font-size: 15.5px; line-height: 30px; }
@@ -44,7 +43,7 @@ footer { padding: 40px 0; font-size: 13px; color: color-mix(in srgb, var(--color
 </style>
 </helmet>
 <nav class="nav">
-  <a href="./index.html" class="nav-brand">Samosanomics</a>
+  <a href="./index.html" class="nav-brand">The Samosanomics Cookbook</a>
   <a href="./index.html">Recipes</a>
 </nav>
 <div class="wrap">
@@ -57,13 +56,13 @@ footer { padding: 40px 0; font-size: 13px; color: color-mix(in srgb, var(--color
     </div>
   </section>
 
-  <figure class="plate-wrap plate">
-    <image-slot id="thecha-spaghetti-photo" shape="rect" placeholder="Photo of the finished dish" src="assets/thecha-spaghetti.jpeg"></image-slot>
+  <figure class="plate-wrap">
+    <img class="plate" src="assets/thecha-spaghetti.jpeg" alt="Finished Thecha Spaghetti, plated">
   </figure>
 
   <div class="note-card card">
     <p class="card-kicker">The story</p>
-    <p class="placeholder">Add your notes about this recipe here.</p>
+    <p>This is a recipe I've cooked with my friends in India and the US! It's a great recipe to make with your friends :)</p>
   </div>
 
   <hr class="hr" />
